@@ -14,21 +14,23 @@ interface GradualSpacingProps {
   duration?: number;
   delayMultiple?: number;
   framerProps?: Variants;
-  className?: string; // Add className prop
+  className?: string;
+  initialDelay?: number; // Add initialDelay prop
 }
 
 const GradualSpacing: React.FC<GradualSpacingProps> = ({
   textSegments,
-  duration = 0.8, // Slower animation duration
-  delayMultiple = 0.3, // Slower delay between characters
+  duration = 0.6,
+  delayMultiple = 0.1,
   framerProps = {
     hidden: { opacity: 0, x: -20 },
     visible: { opacity: 1, x: 0 },
   },
-  className, // Destructure className prop
+  className,
+  initialDelay = 0, // Default initial delay to 0
 }) => {
   return (
-    <div className={cn("flex justify-center items-center space-x-1", className)}> {/* Apply className here */}
+    <div className={cn("flex justify-center items-center space-x-1", className)}>
       <AnimatePresence>
         {textSegments.map((segment, segmentIndex) =>
           segment.text.split("").map((char, charIndex) => (
@@ -38,7 +40,7 @@ const GradualSpacing: React.FC<GradualSpacingProps> = ({
               animate="visible"
               exit="hidden"
               variants={framerProps}
-              transition={{ duration, delay: (segmentIndex + charIndex) * delayMultiple }}
+              transition={{ duration, delay: initialDelay + (segmentIndex + charIndex) * delayMultiple }} // Add initial delay
               className={cn("drop-shadow-sm inline-block", segment.className)}
             >
               {char === " " ? <span>&nbsp;</span> : char}
