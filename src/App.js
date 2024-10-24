@@ -7,11 +7,6 @@ import { FaGithub, FaBriefcase, FaLinkedin, FaFileAlt, FaArrowDown } from 'react
 function App() {
   const [showArrow, setShowArrow] = useState(true);
 
-  const textSegments = [
-    { text: "Hola, soy ", className: "text-black" },
-    { text: "Felipe Alcázar Gómez", className: "text-red-500" }
-  ];
-
   const handleGithubClick = () => {
     window.open('https://github.com/FelipeAlcazar', '_blank');
   };
@@ -46,13 +41,21 @@ function App() {
   return (
     <div className="App">
       <div className="flex flex-col justify-center items-center min-h-screen relative">
-        <div className="flex-grow flex justify-center items-center">
-          <GradualSpacing 
-            textSegments={textSegments}
-            delayMultiple={0.1}
-            duration={0.5}
-            className="text-7xl select-none" // Ensure the font and size are applied
-          />
+        <div className="flex-grow flex flex-col justify-center items-center lg:flex-row">
+          <div className="flex flex-col lg:flex-row items-center">
+            <GradualSpacing 
+              textSegments={[{ text: "Hola, soy ", className: "text-black" }]}
+              delayMultiple={0.1}
+              duration={0.5}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl select-none leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed xl:leading-loose" // Responsive font sizes and line heights
+            />
+            <GradualSpacing 
+              textSegments={[{ text: "Felipe Alcázar Gómez", className: "text-red-500" }]}
+              delayMultiple={0.1}
+              duration={0.5}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl select-none leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed xl:leading-loose mt-4 lg:mt-0 lg:ml-2" // Responsive font sizes and line heights
+            />
+          </div>
         </div>
         {showArrow && (
           <FaArrowDown 
