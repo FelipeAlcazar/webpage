@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Bienvenido a Mi Página Web Personal 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hola, soy **Felipe Alcázar**, y te doy la bienvenida a mi página web personal. Aquí encontrarás toda la información sobre mi **formación académica**, **experiencia profesional** y algunos de mis **proyectos** destacados. La página está diseñada para ofrecer una experiencia interactiva y visualmente atractiva, destacando lo mejor de mi trayectoria.
 
-## Available Scripts
+## Tecnologías Utilizadas 🛠️
 
-In the project directory, you can run:
+Este sitio está construido usando una arquitectura moderna que aprovecha al máximo las capacidades de **React** y **Tailwind CSS** para crear una experiencia dinámica y visualmente impactante.
 
-### `npm start`
+- **React**: Toda la estructura y lógica del sitio se basa en **React**, permitiendo un diseño modular y la reutilización eficiente de componentes.
+- **Tailwind CSS**: Para un diseño rápido y completamente personalizable, uso **Tailwind CSS**, que facilita la creación de estilos precisos y permite ajustes visuales consistentes en toda la página.
+- **React Hooks**: Utilizo `useState` y `useEffect` para gestionar eventos y el estado de componentes interactivos, como el botón de desplazamiento hacia arriba que aparece al hacer scroll.
+- **Componentes Personalizados en React**:
+  - `GradualSpacing`: Crea un efecto de espaciado gradual en el texto para enfatizar palabras.
+  - `WordPullUp`: Aplica un efecto de aparición para destacar mi nombre.
+  - `ShineBorder`: Un borde brillante que rodea la sección principal para un toque especial.
+  - `BlurFade`: Agrega un efecto de desvanecimiento para crear una transición visual suave en las secciones.
+  
+## Qué encontrarás 🌐
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En esta web, además de conocer más sobre mí, puedes:
+- **Explorar mi Formación y Experiencia**: Con una línea de tiempo visual y detallada de mis estudios y trabajos.
+- **Ver Proyectos y Portafolio**: Incluye enlaces directos a algunos de mis proyectos destacados.
+- **Contactar conmigo**: Los íconos en el Dock al pie de la página te llevan a mis perfiles de **LinkedIn** y **GitHub**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+¡Gracias por visitar mi página! Espero que disfrutes navegando y que encuentres interesante mi trabajo y trayectoria.
