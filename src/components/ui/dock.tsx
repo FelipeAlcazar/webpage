@@ -126,7 +126,13 @@ const DockIcon = ({
       >
         {children}
       </motion.div>
-      <ReactTooltip id={title} place="top" /> {/* Tooltip configuration with rounded corners */}
+      <ReactTooltip 
+        id={title} 
+        place="top" 
+        className="rounded-full" // Use rounded-full for fully rounded corners
+        noArrow // Add noArrow prop to remove the arrow
+        style={{ borderRadius: '16px' }} // Add custom border-radius for more rounded corners
+      />
     </>
   );
 };
