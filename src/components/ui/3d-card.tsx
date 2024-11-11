@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "../../lib/utils"; 
-import Image from "next/image";
 import React, {
   createContext,
   useState,
@@ -45,6 +44,13 @@ export const CardContainer = ({
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
   };
+
+  const handleClick = () => {
+    if (window.innerWidth <= 768) {
+      setIsMouseEntered(!isMouseEntered);
+    }
+  };
+
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
@@ -61,6 +67,7 @@ export const CardContainer = ({
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
+          onClick={handleClick}
           className={cn(
             "flex items-center justify-center relative transition-all duration-200 ease-linear",
             className
@@ -86,7 +93,7 @@ export const CardBody = ({
   return (
     <div
       className={cn(
-        "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "h-96 w-96 xs:w-64 xs:h-64 sm:w-80 sm:h-80 md:w-72 md:h-72 lg:w-96 lg:h-96 [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]",
         className
       )}
     >
@@ -105,6 +112,10 @@ export const CardItem = ({
   rotateX = 0,
   rotateY = 0,
   rotateZ = 0,
+  title,
+  text,
+  logos = [],
+  link,
   ...rest
 }: {
   as?: React.ElementType;
@@ -116,31 +127,71 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
+  title?: string;
+  text?: string;
+  logos?: string[];
+  link?: string;
   [key: string]: any;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [isMouseEntered] = useMouseEnter();
+  const [isMouseEntered, setIsMouseEntered] = useMouseEnter();
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     handleAnimations();
-  }, [isMouseEntered]);
+  }, [isMouseEntered, isClicked]);
 
   const handleAnimations = () => {
     if (!ref.current) return;
-    if (isMouseEntered) {
+    if (isMouseEntered || isClicked) {
       ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
     } else {
       ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (window.innerWidth <= 768) {
+      if (isClicked) {
+
+      } else {
+        setIsClicked(true);
+      }
+    } else {
+
+    }
+  };
+
   return (
     <Tag
       ref={ref}
-      className={cn("w-fit transition duration-200 ease-linear", className)}
+      className={cn("w-full h-full transition duration-200 ease-linear relative", className)}
+      onClick={handleClick}
       {...rest}
     >
       {children}
+      <div
+        className={cn(
+          "absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white p-4 rounded-2xl transition-opacity duration-300",
+          { "opacity-100 lg:opacity-0": !isMouseEntered && !isClicked, "opacity-100": isMouseEntered || isClicked }
+        )}
+      >
+        <h3 className="text-xl font-bold mb-4">{title}</h3>
+        <p className="text-sm text-center mb-4">{text}</p>
+        <p className="text-sm text-center bg-blue-500 text-white font-bold py-2 px-4 rounded">
+          Ir a GitHub
+        </p>
+      </div>
+      <div
+        className={cn(
+          "absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 transition-opacity duration-300",
+          { "opacity-100 lg:opacity-0": !isMouseEntered && !isClicked, "opacity-100": isMouseEntered || isClicked }
+        )}
+      >
+        {logos.map((logo, index) => (
+          <img key={index} src={logo} alt="Technology Logo" className="h-6 w-6" />
+        ))}
+      </div>
     </Tag>
   );
 };

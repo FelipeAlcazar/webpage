@@ -6,6 +6,7 @@ import ShineBorder from "./components/ui/shine-border"; // Import ShineBorder
 import { Dock, DockIcon } from "./components/ui/dock"; // Import Dock and DockIcon
 import { FaGithub, FaBriefcase, FaLinkedin, FaFileAlt, FaArrowUp } from 'react-icons/fa'; // Import GitHub, Portfolio, LinkedIn, Document, and Arrow Up icons
 import BlurFade from "./components/ui/blur-fade"; // Import BlurFade
+import { CardContainer, CardBody, CardItem } from "./components/ui/3d-card"; // Import 3dcard components
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
@@ -93,11 +94,11 @@ function App() {
       </ShineBorder>
 
       {/* New Section */}
-      <section className="relative min-h-screen flex flex-col justify-center bg-gray-100 overflow-hidden m-0 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
-        <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-8"> {/* Reduced padding */}
+      <section className="relative min-h-screen flex flex-col justify-center bg-gray-100 overflow-hidden m-0 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+        <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-4"> {/* Reduced padding */}
           <div className="flex flex-col lg:flex-row items-center justify-center">
             <BlurFade inView={true} delay={0.2}>
-              <div className="text-center lg:text-left lg:w-3/4 p-4 lg:p-12 lg:my-4">
+              <div className="text-center lg:text-left lg:w-3/4 p-4 lg:p-8 lg:my-4">
                 <p className="text-2xl lg:text-3xl text-black">
                   Te doy la bienvenida a mi página web personal. <br/> <br/>
                   Mi nombre es <br/><span className="text-red-500 font-semibold italic">Felipe Alcázar Gómez</span>.<br/><br/> 
@@ -117,13 +118,13 @@ function App() {
         </div>
       </section>
 
-      <section className="relative flex flex-col justify-center bg-gray-100 overflow-hidden m-0 p-4 sm:p-8 md:p-12"> {/* Updated padding for large screens */}
-        <div className="w-full max-w-6xl mx-auto">
-          <div className="flex flex-col justify-center divide-y divide-slate-200">
-            <div className="w-full max-w-3xl mx-auto">
-              <div className="-my-6">
+      <section className="relative flex flex-col justify-center bg-gray-100 overflow-hidden m-0 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+  <div className="w-full max-w-6xl mx-auto">
+    <div className="flex flex-col justify-center divide-y divide-slate-200">
+      <div className="w-full max-w-3xl mx-auto">
+        <div className="-my-6">
                 <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-6 group">
+                  <div className="relative pl-8 sm:pl-32 py-4 group">
                     <div className="font-medium text-red-500 mb-1 sm:mb-0">🎓 Bachillerato</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                       <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jul 2019</time>
@@ -134,7 +135,7 @@ function App() {
                 </BlurFade>
 
                 <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-6 group">
+                  <div className="relative pl-8 sm:pl-32 py-4 group">
                     <div className="font-medium text-red-500 mb-1 sm:mb-0">&#x1F1EC;&#x1F1E7; Certificación oficial en Inglés</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                       <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Nov 2020</time>
@@ -145,7 +146,7 @@ function App() {
                 </BlurFade>
                 
                 <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-6 group">
+                  <div className="relative pl-8 sm:pl-32 py-4 group">
                     <div className="font-medium text-red-500 mb-1 sm:mb-0">🖥️ Ciclo Formativo</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                       <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jun 2021</time>
@@ -156,7 +157,7 @@ function App() {
                 </BlurFade>
                 
                 <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-6 group">
+                  <div className="relative pl-8 sm:pl-32 py-4 group">
                     <div className="font-medium text-red-500 mb-1 sm:mb-0">💼 Prácticas Profesionales</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                       <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jun 2021</time>
@@ -168,7 +169,7 @@ function App() {
                 </BlurFade>
                 
                 <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-6 group">
+                  <div className="relative pl-8 sm:pl-32 py-4 group">
                     <div className="font-medium text-red-500 mb-1 sm:mb-0">🧑‍💻 Grado en Ingeniería Informática</div>
                     <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                       <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">HOY</time>
@@ -182,8 +183,27 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="next-section" className="min-h-screen flex justify-center items-center bg-gray-100 m-0 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
-        <h2 className="text-4xl text-black">More Content Here</h2>
+      <section id="next-section" className="flex flex-col justify-center items-center bg-gray-100 m-0 p-4 ">
+      <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+  <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
+    <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
+      <CardItem 
+        translateZ={50} 
+        title="BeatTracker" 
+        text="Bot para Telegram que permite consultar eventos y conciertos de artistas mediante el API de TicketMaster."
+        logos={[
+          `${process.env.PUBLIC_URL}/vscode.svg`,
+          `${process.env.PUBLIC_URL}/python.svg`,
+          `${process.env.PUBLIC_URL}/docker.svg`
+        ]}
+      >
+        <img src={`${process.env.PUBLIC_URL}/beatTracker.jpg`} alt="3D Card Image" className="w-full h-full object-cover rounded-2xl" />
+      </CardItem>
+    </CardBody>
+  </a>
+</CardContainer>
+
+        
       </section>
     </div>
   );
