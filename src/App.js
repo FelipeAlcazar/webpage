@@ -184,24 +184,26 @@ function App() {
         </div>
       </section>
       <section id="next-section" className="flex flex-col justify-center items-center bg-gray-100 m-0 p-4 ">
-      <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
-  <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
-    <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
-      <CardItem 
-        translateZ={50} 
-        title="BeatTracker" 
-        text="Bot para Telegram que permite consultar eventos y conciertos de artistas mediante el API de TicketMaster."
-        logos={[
-          `${process.env.PUBLIC_URL}/vscode.svg`,
-          `${process.env.PUBLIC_URL}/python.svg`,
-          `${process.env.PUBLIC_URL}/docker.svg`
-        ]}
-      >
-        <img src={`${process.env.PUBLIC_URL}/beatTracker.jpg`} alt="3D Card Image" className="w-full h-full object-cover rounded-2xl" />
-      </CardItem>
-    </CardBody>
-  </a>
-</CardContainer>
+      <BlurFade inView={true} delay={0.2}>
+    <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+      <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
+        <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
+          <CardItem 
+            translateZ={50} 
+            title="BeatTracker" 
+            text="Bot para Telegram que permite consultar eventos y conciertos de artistas mediante el API de TicketMaster."
+            logos={[
+              `${process.env.PUBLIC_URL}/vscode.svg`,
+              `${process.env.PUBLIC_URL}/python.svg`,
+              `${process.env.PUBLIC_URL}/docker.svg`
+            ]}
+          >
+            <img src={`${process.env.PUBLIC_URL}/beatTracker.jpg`} alt="3D Card Image" className="w-full h-full object-cover rounded-2xl" />
+          </CardItem>
+        </CardBody>
+      </a>
+    </CardContainer>
+  </BlurFade>
 
         
       </section>
