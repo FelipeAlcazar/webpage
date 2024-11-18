@@ -183,15 +183,15 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="next-section" className="flex flex-col justify-center items-center bg-gray-100 m-0 p-4 ">
-      <BlurFade inView={true} delay={0.2}>
+      <section id="next-section" className="flex flex-col lg:flex-row justify-center items-center bg-gray-100 m-0 p-4 space-y-4 lg:space-y-0 lg:space-x-8">
+  <BlurFade inView={true} delay={0.2}>
     <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
         <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
           <CardItem 
             translateZ={50} 
             title="BeatTracker" 
-            text="Bot para Telegram que permite consultar eventos y conciertos de artistas mediante el API de TicketMaster."
+            text="Bot para Telegram que permite consultar eventos y conciertos de artistas mediante el API REST de TicketMaster."
             logos={[
               `${process.env.PUBLIC_URL}/vscode.svg`,
               `${process.env.PUBLIC_URL}/python.svg`,
@@ -204,9 +204,31 @@ function App() {
       </a>
     </CardContainer>
   </BlurFade>
-
-        
-      </section>
+  <BlurFade inView={true} delay={0.2}>
+    <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+      <a href={`${process.env.PUBLIC_URL}/NoteTopia.pdf`} target="_blank" rel="noopener noreferrer" className="w-full h-full">
+        <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
+          <CardItem 
+            translateZ={50} 
+            title="NoteTopia" 
+            text="NoteTopia es una aplicación web basada en la creación y compartición de notas de forma colaborativa inspirada en Notion."
+            logos={[
+              `${process.env.PUBLIC_URL}/react.svg`,
+              `${process.env.PUBLIC_URL}/nodejs.svg`,
+              `${process.env.PUBLIC_URL}/express.svg`,
+              `${process.env.PUBLIC_URL}/mongodb.svg`
+            ]}
+            buttonText="Ver Documentación"
+            buttonColor="bg-red-500"
+            note="Su repositorio es privado al incluir información sensible. Se incluye la documentación del proyecto."
+          >
+            <img src={`${process.env.PUBLIC_URL}/notetopia-logo.jpg`} alt="NoteTopia Logo" className="w-full h-full object-cover rounded-2xl" />
+          </CardItem>
+        </CardBody>
+      </a>
+    </CardContainer>
+  </BlurFade>
+</section>
     </div>
   );
 }

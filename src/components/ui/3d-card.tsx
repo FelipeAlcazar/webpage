@@ -116,6 +116,9 @@ export const CardItem = ({
   text,
   logos = [],
   link,
+  buttonText = "Ir a GitHub",
+  buttonColor = "bg-blue-500",
+  note,
   ...rest
 }: {
   as?: React.ElementType;
@@ -131,6 +134,9 @@ export const CardItem = ({
   text?: string;
   logos?: string[];
   link?: string;
+  buttonText?: string;
+  buttonColor?: string;
+  note?: string;
   [key: string]: any;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -178,9 +184,10 @@ export const CardItem = ({
       >
         <h3 className="text-xl font-bold mb-4">{title}</h3>
         <p className="text-sm text-center mb-4">{text}</p>
-        <p className="text-sm text-center bg-blue-500 text-white font-bold py-2 px-4 rounded">
-          Ir a GitHub
+        <p className={cn("text-sm text-center text-white font-bold py-2 px-4 rounded mb-4", buttonColor)}>
+          {buttonText}
         </p>
+        {note && <p className="text-xs text-center italic mt-2">{note}</p>}
       </div>
       <div
         className={cn(
