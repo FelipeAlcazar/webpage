@@ -222,7 +222,7 @@ function App() {
             buttonColor="bg-red-500"
             note="Su repositorio es privado al incluir información sensible. Se incluye la documentación del proyecto."
           >
-            <img src={`${process.env.PUBLIC_URL}/notetopia-logo.jpg`} alt="NoteTopia Logo" className="w-full h-full object-cover rounded-2xl" />
+            <img src={`${process.env.PUBLIC_URL}/NoteTopia-Logo.jpg`} alt="NoteTopia Logo" className="w-full h-full object-cover rounded-2xl" />
           </CardItem>
         </CardBody>
       </a>
