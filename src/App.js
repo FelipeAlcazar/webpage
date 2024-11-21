@@ -198,7 +198,7 @@ function App() {
               `${process.env.PUBLIC_URL}/docker.svg`
             ]}
           >
-            <img src={`${process.env.PUBLIC_URL}/beatTracker.jpg`} alt="3D Card Image" className="w-full h-full object-cover rounded-2xl" />
+            <img src={`${process.env.PUBLIC_URL}/beatTracker.png`} alt="3D Card Image" className="w-full h-full object-cover rounded-2xl" />
           </CardItem>
         </CardBody>
       </a>
@@ -228,6 +228,27 @@ function App() {
       </a>
     </CardContainer>
   </BlurFade>
+
+  <BlurFade inView={true} delay={0.2}>
+  <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+    <a href="https://github.com/Enriquesmo/IPO2_Pokemon_Pokedex" target="_blank" rel="noopener noreferrer" className="w-full h-full">
+      <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <CardItem 
+          translateZ={50} 
+          title="IPO2 Pokémon Pokedex" 
+          text="Proyecto basado en el famoso juego Pokémon con un enfoque en el diseño mediante UWP y XAML. Aquí podrás hacer uso de una pokedex así como de un pequeño sistema de combate."
+          logos={[
+            `${process.env.PUBLIC_URL}/visual-studio.svg`,
+            `${process.env.PUBLIC_URL}/csharp.svg`,
+            `${process.env.PUBLIC_URL}/windows.svg`,
+          ]}
+        >
+          <img src={`${process.env.PUBLIC_URL}/IPO2Pokedex.png`} alt="IPO2 Pokémon Pokedex Logo" className="w-full h-full object-cover rounded-2xl" />
+        </CardItem>
+      </CardBody>
+    </a>
+  </CardContainer>
+</BlurFade>
 </section>
     </div>
   );
