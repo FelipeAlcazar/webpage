@@ -183,7 +183,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="next-section" className="flex flex-col lg:flex-row justify-center items-center bg-gray-100 m-0 p-4 space-y-4 lg:space-y-0 lg:space-x-8">
+<section id="next-section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-2 lg:gap-4 justify-center items-center bg-gray-100 m-0 p-1 sm:p-2 lg:p-4">
   <BlurFade inView={true} delay={0.2}>
     <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
@@ -249,8 +249,31 @@ function App() {
     </a>
   </CardContainer>
 </BlurFade>
+<BlurFade inView={true} delay={0.2}>
+  <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+    <a href="https://github.com/FelipeAlcazar/GSI-LittleERP" target="_blank" rel="noopener noreferrer" className="w-full h-full">
+      <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <CardItem 
+          translateZ={50} 
+          title="LittleERP" 
+          text="Aplicación ligera de Planificación de Recursos Empresariales (ERP) diseñada para gestionar y optimizar los procesos empresariales. Se destaca su diseño con UWP y XAML."
+          logos={[
+            `${process.env.PUBLIC_URL}/visual-studio.svg`,
+            `${process.env.PUBLIC_URL}/csharp.svg`,
+            `${process.env.PUBLIC_URL}/sqlite.svg`,
+            `${process.env.PUBLIC_URL}/windows.svg`
+          ]}
+        >
+          <img src={`${process.env.PUBLIC_URL}/logoLittleERP.png`} alt="LittleERP Logo" className="w-full h-full object-cover rounded-2xl" />
+        </CardItem>
+      </CardBody>
+    </a>
+  </CardContainer>
+</BlurFade>
 </section>
+
     </div>
+    
   );
 }
 
