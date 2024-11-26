@@ -183,8 +183,7 @@ function App() {
           </div>
         </div>
       </section>
-<section id="next-section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-2 lg:gap-4 justify-center items-center bg-gray-100 m-0 p-1 sm:p-2 lg:p-4">
-  <BlurFade inView={true} delay={0.2}>
+      <section id="next-section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center bg-gray-100 m-0 p-4">  <BlurFade inView={true} delay={0.2}>
     <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
         <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
@@ -256,7 +255,7 @@ function App() {
         <CardItem 
           translateZ={50} 
           title="LittleERP" 
-          text="Aplicación ligera de Planificación de Recursos Empresariales (ERP) diseñada para gestionar y optimizar los procesos empresariales. Se destaca su diseño con UWP y XAML."
+          text="Aplicación ligera de Planificación de Recursos Empresariales (ERP) diseñada para gestionar y optimizar los procesos empresariales."
           logos={[
             `${process.env.PUBLIC_URL}/visual-studio.svg`,
             `${process.env.PUBLIC_URL}/csharp.svg`,
@@ -271,9 +270,7 @@ function App() {
   </CardContainer>
 </BlurFade>
 </section>
-
     </div>
-    
   );
 }
 
