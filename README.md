@@ -14,7 +14,8 @@ Este sitio está construido usando una arquitectura moderna que aprovecha al má
   - `WordPullUp`: Aplica un efecto de aparición para destacar mi nombre.
   - `ShineBorder`: Un borde brillante que rodea la sección principal para un toque especial.
   - `BlurFade`: Agrega un efecto de desvanecimiento para crear una transición visual suave en las secciones.
-  
+  - `3DCard`: Un componente de tarjeta 3D interactivo que muestra información de proyectos.
+
 ## Qué encontrarás 🌐
 
 En esta web, además de conocer más sobre mí, puedes:
