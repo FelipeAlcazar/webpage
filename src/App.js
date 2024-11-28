@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './index.css'; // Ensure this import is present
 import GradualSpacing from "./components/magicui/gradual-spacing";
 import WordPullUp from "./components/ui/word-pull-up"; // Import WordPullUp
@@ -10,6 +10,7 @@ import { CardContainer, CardBody, CardItem } from "./components/ui/3d-card"; // 
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
+  const dockRef = useRef(null);
 
   const handleGithubClick = () => {
     window.open('https://github.com/FelipeAlcazar', '_blank');
@@ -27,6 +28,28 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const dockElement = dockRef.current;
+      const footerElement = document.querySelector('footer');
+      const footerRect = footerElement.getBoundingClientRect();
+
+      if (footerRect.top < window.innerHeight) {
+        dockElement.style.opacity = '0';
+        dockElement.style.transition = 'opacity 0.5s ease'; 
+        dockElement.style.pointerEvents = 'none';
+      } else {
+        dockElement.style.opacity = '1'; 
+        dockElement.style.pointerEvents = 'auto';
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -79,7 +102,7 @@ function App() {
               onClick={scrollToTop} 
             />
           )}
-          <Dock className="fixed bottom-0 left-0 right-0 mx-auto mb-4"> {/* Updated class name for fixed position */}
+          <Dock ref={dockRef} className="fixed bottom-0 left-0 right-0 mx-auto mb-4"> {/* Updated class name for fixed position */}
             <DockIcon className="bg-black" onClick={handleGithubClick} title="GitHub">
               <FaGithub className="text-white" size={24} /> {/* GitHub icon */}
             </DockIcon>
@@ -183,7 +206,8 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="next-section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center bg-gray-100 m-0 p-4">  <BlurFade inView={true} delay={0.2}>
+      <section id="next-section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 justify-center items-center bg-gray-100 m-0 p-1">
+        <BlurFade inView={true} delay={0.2}>
     <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
         <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
@@ -212,6 +236,7 @@ function App() {
             title="NoteTopia" 
             text="NoteTopia es una aplicación web basada en la creación y compartición de notas de forma colaborativa inspirada en Notion."
             logos={[
+              `${process.env.PUBLIC_URL}/vscode.svg`,
               `${process.env.PUBLIC_URL}/react.svg`,
               `${process.env.PUBLIC_URL}/nodejs.svg`,
               `${process.env.PUBLIC_URL}/express.svg`,
@@ -269,7 +294,47 @@ function App() {
     </a>
   </CardContainer>
 </BlurFade>
+<BlurFade inView={true} delay={0.2}>
+  <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+    <a href="https://github.com/FelipeAlcazar/webpage" target="_blank" rel="noopener noreferrer" className="w-full h-full">
+      <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <CardItem 
+          translateZ={50} 
+          title="Página Web Personal" 
+          text="Este proyecto es la propia página que estás visitando. Está construida con React y Tailwind CSS para una experiencia dinámica, responsive y visualmente atractiva."
+          logos={[
+            `${process.env.PUBLIC_URL}/vscode.svg`,
+            `${process.env.PUBLIC_URL}/react.svg`,
+            `${process.env.PUBLIC_URL}/nodejs.svg`,
+            `${process.env.PUBLIC_URL}/tailwindcss.svg`,
+            `${process.env.PUBLIC_URL}/javascript.svg`,
+          ]}
+        >
+          <img src={`${process.env.PUBLIC_URL}/webpage-logo.png`} alt="Página Web Personal Logo" className="w-full h-full object-cover rounded-2xl" />
+        </CardItem>
+      </CardBody>
+    </a>
+  </CardContainer>
+</BlurFade>
 </section>
+<footer className="bg-red-500 text-white py-4 mt-auto">
+  <div className="container mx-auto text-center">
+    <a href="mailto:felipeatle@hotmail.com" className="block mb-2 text-sm">felipeatle@hotmail.com</a>
+    <p className="text-sm mb-2">+34 645 731 980</p>
+    <div className="flex justify-center space-x-4 mt-2">
+      <a href="https://github.com/FelipeAlcazar" target="_blank" rel="noopener noreferrer">
+        <FaGithub className="text-white" size={24} />
+      </a>
+      <a href="https://www.linkedin.com/in/felipealc%C3%A1zarg%C3%B3mez/" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin className="text-white" size={24} />
+      </a>
+      <a href={`${process.env.PUBLIC_URL}/Curriculum%20Vitae%20(Espa%C3%B1ol).pdf`} target="_blank" rel="noopener noreferrer">
+  <FaFileAlt className="text-white" size={24} />
+</a>
+    </div>
+    <p className="text-sm mt-4">&copy; 2024 Felipe Alcázar Gómez. Todos los derechos reservados.</p>
+  </div>
+</footer>
     </div>
   );
 }
