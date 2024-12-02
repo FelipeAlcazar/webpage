@@ -207,6 +207,29 @@ function App() {
         </div>
       </section>
       <section id="next-section" className="flex flex-wrap justify-center items-center bg-gray-100 m-0 p-1 text-center gap-10 gap-y-0">
+      <BlurFade inView={true} delay={0.2}>
+  <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+    <a href="https://github.com/FelipeAlcazar/NTTDataDB-Prototype" target="_blank" rel="noopener noreferrer" className="w-full h-full">
+      <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <CardItem 
+          translateZ={50} 
+          title="PostTopia - NTTData" 
+          text="Prototipo de Red Social para la segunda edición de NTT Data Digital Builders, con la colaboración de la Escuela Superior de Informática de Ciudad Real."
+          logos={[
+            `${process.env.PUBLIC_URL}/vscode.svg`,
+            `${process.env.PUBLIC_URL}/react.svg`,
+            `${process.env.PUBLIC_URL}/typescript.svg`,
+            `${process.env.PUBLIC_URL}/javascript.svg`
+          ]}
+          note="Este proyecto contribuyó a ser galardonado con el PRIMER PREMIO en la competición, valorado en 1000€."
+
+        >
+          <img src={`${process.env.PUBLIC_URL}/posttopia.png`} alt="NTTDataDB Prototype Logo" className="w-full h-full object-cover rounded-2xl" />
+        </CardItem>
+      </CardBody>
+    </a>
+  </CardContainer>
+</BlurFade>
         <BlurFade inView={true} delay={0.2}>
     <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
@@ -227,6 +250,7 @@ function App() {
       </a>
     </CardContainer>
   </BlurFade>
+  
   <BlurFade inView={true} delay={0.2}>
     <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href={`${process.env.PUBLIC_URL}/NoteTopia.pdf`} target="_blank" rel="noopener noreferrer" className="w-full h-full">
