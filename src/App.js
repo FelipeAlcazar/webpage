@@ -206,9 +206,9 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="next-section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 justify-center items-center bg-gray-100 m-0 p-1">
+      <section id="next-section" className="flex flex-wrap justify-center items-center bg-gray-100 m-0 p-1 text-center gap-8">
         <BlurFade inView={true} delay={0.2}>
-    <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+    <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
         <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
           <CardItem 
@@ -228,7 +228,7 @@ function App() {
     </CardContainer>
   </BlurFade>
   <BlurFade inView={true} delay={0.2}>
-    <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+    <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href={`${process.env.PUBLIC_URL}/NoteTopia.pdf`} target="_blank" rel="noopener noreferrer" className="w-full h-full">
         <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
           <CardItem 
@@ -254,7 +254,7 @@ function App() {
   </BlurFade>
 
   <BlurFade inView={true} delay={0.2}>
-  <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+  <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
     <a href="https://github.com/Enriquesmo/IPO2_Pokemon_Pokedex" target="_blank" rel="noopener noreferrer" className="w-full h-full">
       <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
         <CardItem 
@@ -274,7 +274,7 @@ function App() {
   </CardContainer>
 </BlurFade>
 <BlurFade inView={true} delay={0.2}>
-  <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+  <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
     <a href="https://github.com/FelipeAlcazar/GSI-LittleERP" target="_blank" rel="noopener noreferrer" className="w-full h-full">
       <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
         <CardItem 
@@ -295,7 +295,7 @@ function App() {
   </CardContainer>
 </BlurFade>
 <BlurFade inView={true} delay={0.2}>
-  <CardContainer className="cursor-pointer" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+  <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
     <a href="https://github.com/FelipeAlcazar/webpage" target="_blank" rel="noopener noreferrer" className="w-full h-full">
       <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
         <CardItem 
