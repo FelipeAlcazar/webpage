@@ -206,7 +206,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="next-section" className="flex flex-wrap justify-center items-center bg-gray-100 m-0 p-1 text-center gap-8">
+      <section id="next-section" className="flex flex-wrap justify-center items-center bg-gray-100 m-0 p-1 text-center gap-10 gap-y-0">
         <BlurFade inView={true} delay={0.2}>
     <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
       <a href="https://github.com/alon159/isi-beattracker" target="_blank" rel="noopener noreferrer" className="w-full h-full">
