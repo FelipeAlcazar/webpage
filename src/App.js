@@ -134,7 +134,7 @@ function App() {
             </BlurFade>
             <BlurFade inView={true} delay={0.2}>
               <div className="w-full max-w-xs lg:max-w-none">
-                <img src={`${process.env.PUBLIC_URL}/profilepic.jpg`} alt="Felipe Alcázar" className="h-auto rounded-lg shadow-lg w-full lg:w-auto" />
+                <img src={`${process.env.PUBLIC_URL}/profilepicBio.jpg`} alt="Felipe Alcázar" className="h-auto rounded-lg shadow-lg w-full lg:w-auto" />
               </div>
             </BlurFade>
           </div>
