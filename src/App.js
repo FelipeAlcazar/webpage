@@ -7,6 +7,7 @@ import { Dock, DockIcon } from "./components/ui/dock"; // Import Dock and DockIc
 import { FaGithub, FaBriefcase, FaLinkedin, FaFileAlt, FaArrowUp } from 'react-icons/fa'; // Import GitHub, Portfolio, LinkedIn, Document, and Arrow Up icons
 import BlurFade from "./components/ui/blur-fade"; // Import BlurFade
 import { CardContainer, CardBody, CardItem } from "./components/ui/3d-card"; // Import 3dcard components
+import { BackgroundBeams } from "./components/ui/background-beams"; // Adjust the path as necessary
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
@@ -80,20 +81,21 @@ function App() {
 
   return (
     <div className="App h-full">
-      <ShineBorder className="relative z-10 p-4 w-full h-screen flex justify-center items-center" borderWidth={3} color="#ff0000"> {/* Add ShineBorder component */}
+      <ShineBorder className="relative z-10 p-4 w-full h-screen flex justify-center items-center" borderWidth={3} color="#ff0000">
+        <BackgroundBeams className="absolute inset-0 z-0" /> {/* Add this line */}
         <div className="relative z-10 flex flex-col justify-center items-center min-h-full">
           <div className="flex-grow flex flex-col justify-center items-center lg:flex-row">
             <div className="flex flex-col lg:flex-row items-center">
-              <GradualSpacing 
-                textSegments={[{ text: "Hola, soy ", className: "text-black" }]}
-                delayMultiple={0.08}
-                duration={0.5}
-                className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl select-none leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed xl:leading-loose" // Increased font sizes for lower resolutions
-              />
-              <WordPullUp
-                words="Felipe Alcázar"
-                className="text-red-500 text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl select-none leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed xl:leading-loose mt-4 lg:mt-0 lg:ml-2 font-semibold italic" // Increased font sizes for lower resolutions
-              />
+            <GradualSpacing 
+              textSegments={[{ text: "Hola, soy ", className: "text-black opacity-75" }]} // Add opacity-75 class
+              delayMultiple={0.08}
+              duration={0.5}
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl select-none leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed xl:leading-loose"
+            />
+            <WordPullUp
+              words="Felipe Alcázar"
+              className="text-red-500 text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl select-none leading-tight sm:leading-snug md:leading-normal lg:leading-relaxed xl:leading-loose mt-4 lg:mt-0 lg:ml-2 font-semibold italic opacity-75" // Add opacity-75 class
+            />
             </div>
           </div>
           {showArrow && (
@@ -102,15 +104,15 @@ function App() {
               onClick={scrollToTop} 
             />
           )}
-          <Dock ref={dockRef} className="fixed bottom-0 left-0 right-0 mx-auto mb-4"> {/* Updated class name for fixed position */}
+          <Dock ref={dockRef} className="fixed bottom-0 left-0 right-0 mx-auto mb-4">
             <DockIcon className="bg-black" onClick={handleGithubClick} title="GitHub">
-              <FaGithub className="text-white" size={24} /> {/* GitHub icon */}
+              <FaGithub className="text-white" size={24} />
             </DockIcon>
             <DockIcon className="bg-blue-500" onClick={handleLinkedInClick} title="LinkedIn">
-              <FaLinkedin className="text-white" size={24} /> {/* LinkedIn icon */}
+              <FaLinkedin className="text-white" size={24} />
             </DockIcon>
             <DockIcon className="bg-red-500" onClick={handlePortfolioClick} title="Portfolio">
-              <FaFileAlt className="text-white" size={24} /> {/* Document icon */}
+              <FaFileAlt className="text-white" size={24} />
             </DockIcon>
           </Dock>
         </div>
