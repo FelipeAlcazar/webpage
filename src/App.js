@@ -59,7 +59,9 @@ function App() {
             <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jun 2021</time>
             <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Prácticas profesionales en DIMAX Soluciones Integrales S.L.</div>
           </div>
-          <div className="text-slate-500 italic sm:ml-24">Prácticas profesionales en DIMAX Soluciones Integrales S.L., Ciudad Real, España. Participación en el desarrollo de páginas web con WordPress, programación IoT en C++ con placas Arduino, y estudio de investigación de software ERP.</div>
+          <div className="text-slate-500 italic sm:ml-24">
+            Prácticas profesionales en <a href="http://www.dimax.es" className="text-blue-500 underline">DIMAX Soluciones Integrales S.L.</a>, Ciudad Real, España. Participación en el desarrollo de páginas web con WordPress, programación IoT en C++ con placas Arduino, y estudio de investigación de software ERP.
+          </div>
           <div className="text-slate-500 italic sm:ml-24">7 de abril de 2021 - 18 de junio de 2021</div>
         </>
       ),
