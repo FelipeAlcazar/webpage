@@ -8,10 +8,75 @@ import { FaGithub, FaBriefcase, FaLinkedin, FaFileAlt, FaArrowUp } from 'react-i
 import BlurFade from "./components/ui/blur-fade"; // Import BlurFade
 import { CardContainer, CardBody, CardItem } from "./components/ui/3d-card"; // Import 3dcard components
 import { BackgroundBeams } from "./components/ui/background-beams"; // Adjust the path as necessary
+import { Timeline } from "./components/ui/timeline"; // Import Timeline component
 
 function App() {
   const [showArrow, setShowArrow] = useState(false);
   const dockRef = useRef(null);
+
+  const timelineData = [
+    {
+      title: "🎓 Bachillerato",
+      content: (
+        <>
+          <div className="relative">
+            <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jul 2019</time>
+            <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Bachillerato en Ciencias Sociales y Humanidades</div>
+          </div>
+          <div className="text-slate-500 italic sm:ml-24">1 de septiembre de 2017 - 1 de julio de 2019</div>
+        </>
+      ),
+    },
+    {
+      title: "🇬🇧 Certificación oficial en Inglés",
+      content: (
+        <>
+          <div className="relative">
+            <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Nov 2020</time>
+            <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Certificación en lengua inglesa ISE III - CEFR Nivel C1</div>
+          </div>
+          <div className="text-slate-500 italic sm:ml-24">2 de noviembre de 2020</div>
+        </>
+      ),
+    },
+    {
+      title: "🖥️ Ciclo Formativo",
+      content: (
+        <>
+          <div className="relative">
+            <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jun 2021</time>
+            <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma</div>
+          </div>
+          <div className="text-slate-500 italic sm:ml-24">1 de septiembre de 2019 - 1 de junio de 2021</div>
+        </>
+      ),
+    },
+    {
+      title: "💼 Prácticas Profesionales",
+      content: (
+        <>
+          <div className="relative">
+            <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jun 2021</time>
+            <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Prácticas profesionales en DIMAX Soluciones Integrales S.L.</div>
+          </div>
+          <div className="text-slate-500 italic sm:ml-24">Prácticas profesionales en DIMAX Soluciones Integrales S.L., Ciudad Real, España. Participación en el desarrollo de páginas web con WordPress, programación IoT en C++ con placas Arduino, y estudio de investigación de software ERP.</div>
+          <div className="text-slate-500 italic sm:ml-24">7 de abril de 2021 - 18 de junio de 2021</div>
+        </>
+      ),
+    },
+    {
+      title: "🧑‍💻 Grado en Ingeniería Informática",
+      content: (
+        <>
+          <div className="relative">
+            <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">HOY</time>
+            <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Grado en Ingeniería Informática por la Escuela Superior de Informática de UCLM - Cursando 4º curso</div>
+          </div>
+          <div className="text-slate-500 italic sm:ml-24">1 de septiembre de 2021 - Actualidad</div>
+        </>
+      ),
+    },
+  ];
 
   const handleGithubClick = () => {
     window.open('https://github.com/FelipeAlcazar', '_blank');
@@ -143,73 +208,20 @@ function App() {
         </div>
       </section>
 
-      <section className="relative flex flex-col justify-center bg-gray-100 overflow-hidden m-0 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
-  <div className="w-full max-w-6xl mx-auto">
-    <div className="flex flex-col justify-center divide-y divide-slate-200">
-      <div className="w-full max-w-3xl mx-auto">
-        <div className="-my-6">
-                <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-4 group">
-                    <div className="font-medium text-red-500 mb-1 sm:mb-0">🎓 Bachillerato</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                      <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jul 2019</time>
-                      <div className="text-xl font-bold text-slate-900">Bachillerato en Ciencias Sociales y Humanidades</div>
-                    </div>
-                    <div className="text-slate-500 italic">1 de septiembre de 2017 - 1 de julio de 2019</div>
-                  </div>
-                </BlurFade>
-
-                <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-4 group">
-                    <div className="font-medium text-red-500 mb-1 sm:mb-0">&#x1F1EC;&#x1F1E7; Certificación oficial en Inglés</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                      <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Nov 2020</time>
-                      <div className="text-xl font-bold text-slate-900">Certificación en lengua inglesa ISE III - CEFR Nivel C1</div>
-                    </div>
-                    <div className="text-slate-500 italic">2 de noviembre de 2020</div>
-                  </div>
-                </BlurFade>
-                
-                <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-4 group">
-                    <div className="font-medium text-red-500 mb-1 sm:mb-0">🖥️ Ciclo Formativo</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                      <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jun 2021</time>
-                      <div className="text-xl font-bold text-slate-900">Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma</div>
-                    </div>
-                    <div className="text-slate-500 italic">1 de septiembre de 2019 - 1 de junio de 2021</div>
-                  </div>
-                </BlurFade>
-                
-                <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-4 group">
-                    <div className="font-medium text-red-500 mb-1 sm:mb-0">💼 Prácticas Profesionales</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                      <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jun 2021</time>
-                      <div className="text-xl font-bold text-slate-900">Prácticas profesionales en DIMAX Soluciones Integrales S.L.</div>
-                    </div>
-                    <div className="text-slate-500 italic">Prácticas profesionales en DIMAX Soluciones Integrales S.L., Ciudad Real, España. Participación en el desarrollo de páginas web con WordPress, programación IoT en C++ con placas Arduino, y estudio de investigación de software ERP.</div>
-                    <div className="text-slate-500 italic">7 de abril de 2021 - 18 de junio de 2021</div>
-                  </div>
-                </BlurFade>
-                
-                <BlurFade inView={true} delay={0.2}>
-                  <div className="relative pl-8 sm:pl-32 py-4 group">
-                    <div className="font-medium text-red-500 mb-1 sm:mb-0">🧑‍💻 Grado en Ingeniería Informática</div>
-                    <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-red-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                      <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">HOY</time>
-                      <div className="text-xl font-bold text-slate-900">Grado en Ingeniería Informática por la Escuela Superior de Informática de UCLM - Cursando 4º curso </div>
-                    </div>
-                    <div className="text-slate-500 italic">1 de septiembre de 2021 - Actualidad</div>
-                  </div>
-                </BlurFade>
-              </div>                    
-            </div>
-          </div>
+      <section id="timeline" className="relative flex flex-col justify-center bg-gray-100 overflow-hidden m-0 p-0 w-full h-full">
+  <div className="w-full h-full bg-gray-100">
+    <div className="flex flex-col justify-center divide-y divide-slate-200 h-full">
+      <div className="w-full h-full">
+        <div className="h-full">
+          <Timeline data={timelineData} />
         </div>
-      </section>
-      <section id="next-section" className="flex flex-wrap justify-center items-center bg-gray-100 m-0 p-1 text-center gap-10 gap-y-0">
-      <BlurFade inView={true} delay={0.2}>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" className="flex flex-wrap justify-center items-center bg-gray-100 m-0 p-0 text-center gap-10 gap-y-0">
+    <BlurFade inView={true} delay={0.2}>
   <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
     <a href="https://github.com/FelipeAlcazar/NTTDataDB-Prototype" target="_blank" rel="noopener noreferrer" className="w-full h-full">
       <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
@@ -278,7 +290,27 @@ function App() {
       </a>
     </CardContainer>
   </BlurFade>
-
+  <BlurFade inView={true} delay={0.2}>
+  <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
+    <a href="https://github.com/FelipeAlcazar/GSI-LittleERP" target="_blank" rel="noopener noreferrer" className="w-full h-full">
+      <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
+        <CardItem 
+          translateZ={50} 
+          title="LittleERP" 
+          text="Aplicación ligera de Planificación de Recursos Empresariales (ERP) diseñada para gestionar y optimizar los procesos empresariales."
+          logos={[
+            `${process.env.PUBLIC_URL}/visual-studio.svg`,
+            `${process.env.PUBLIC_URL}/csharp.svg`,
+            `${process.env.PUBLIC_URL}/sqlite.svg`,
+            `${process.env.PUBLIC_URL}/windows.svg`
+          ]}
+        >
+          <img src={`${process.env.PUBLIC_URL}/logoLittleERP.png`} alt="LittleERP Logo" className="w-full h-full object-cover rounded-2xl" />
+        </CardItem>
+      </CardBody>
+    </a>
+  </CardContainer>
+</BlurFade>
   <BlurFade inView={true} delay={0.2}>
   <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
     <a href="https://github.com/Enriquesmo/IPO2_Pokemon_Pokedex" target="_blank" rel="noopener noreferrer" className="w-full h-full">
@@ -299,22 +331,21 @@ function App() {
     </a>
   </CardContainer>
 </BlurFade>
+
 <BlurFade inView={true} delay={0.2}>
   <CardContainer className="cursor-pointer mx-auto" containerClassName="w-full max-w-sm sm:max-w-xs lg:max-w-none">
-    <a href="https://github.com/FelipeAlcazar/GSI-LittleERP" target="_blank" rel="noopener noreferrer" className="w-full h-full">
+    <a href="https://github.com/FelipeAlcazar/MulSurv" target="_blank" rel="noopener noreferrer" className="w-full h-full">
       <CardBody className="bg-white shadow-lg rounded-2xl overflow-hidden">
         <CardItem 
           translateZ={50} 
-          title="LittleERP" 
-          text="Aplicación ligera de Planificación de Recursos Empresariales (ERP) diseñada para gestionar y optimizar los procesos empresariales."
+          title="MulSurv" 
+          text="MulSurv es un juego inspirado en Vampire Survivors con modos de juego para un jugador y multijugador. Presenta un estilo pixel-like con personajes inspirados en elementos multimedia."
           logos={[
-            `${process.env.PUBLIC_URL}/visual-studio.svg`,
-            `${process.env.PUBLIC_URL}/csharp.svg`,
-            `${process.env.PUBLIC_URL}/sqlite.svg`,
-            `${process.env.PUBLIC_URL}/windows.svg`
+            `${process.env.PUBLIC_URL}/vscode.svg`,
+            `${process.env.PUBLIC_URL}/python.svg`,
           ]}
         >
-          <img src={`${process.env.PUBLIC_URL}/logoLittleERP.png`} alt="LittleERP Logo" className="w-full h-full object-cover rounded-2xl" />
+          <img src={`${process.env.PUBLIC_URL}/MultSurv-Logo.png`} alt="MultSurv Logo" className="w-full h-full object-cover rounded-2xl" />
         </CardItem>
       </CardBody>
     </a>
@@ -342,6 +373,7 @@ function App() {
     </a>
   </CardContainer>
 </BlurFade>
+
 </section>
 <footer className="bg-red-500 text-white py-4 mt-auto">
   <div className="container mx-auto text-center">
