@@ -16,7 +16,7 @@ function App() {
 
   const timelineData = [
     {
-      title: "🎓 Bachillerato",
+      title: "📚 Bachillerato",
       content: (
         <>
           <div className="relative">
@@ -60,21 +60,45 @@ function App() {
             <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Prácticas profesionales en DIMAX Soluciones Integrales S.L.</div>
           </div>
           <div className="text-slate-500 italic sm:ml-24">
-            Prácticas profesionales en <a href="http://www.dimax.es" className="text-blue-500 underline">DIMAX Soluciones Integrales S.L.</a>, Ciudad Real, España. Participación en el desarrollo de páginas web con WordPress, programación IoT en C++ con placas Arduino, y estudio de investigación de software ERP.
+            Prácticas profesionales de 3 meses en <a href="http://www.dimax.es" className="text-blue-500 underline">DIMAX Soluciones Integrales S.L.</a>, Ciudad Real, España. Participación en el desarrollo de páginas web con WordPress, programación IoT en C++ con placas Arduino, y estudio de investigación de software ERP.
           </div>
           <div className="text-slate-500 italic sm:ml-24">7 de abril de 2021 - 18 de junio de 2021</div>
         </>
       ),
     },
     {
-      title: "🧑‍💻 Grado en Ingeniería Informática",
+      title: "🎓 Grado en Ingeniería Informática",
       content: (
         <>
           <div className="relative">
-            <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">HOY</time>
-            <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Grado en Ingeniería Informática por la Escuela Superior de Informática de UCLM - Cursando 4º curso</div>
+            <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">Jul 2025</time>
+            <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">Grado en Ingeniería Informática </div>
           </div>
-          <div className="text-slate-500 italic sm:ml-24">1 de septiembre de 2021 - Actualidad</div>
+          <div className="text-slate-500 italic sm:ml-24">
+              Título expedido por la <a href="https://esi.uclm.es/" className="text-blue-500 underline">Escuela Superior de Informática</a> de la Universidad de Castilla-La Mancha. Mención bilingüe con especialización en tecnologías de la información.
+          </div>
+          <div className="text-slate-500 italic sm:ml-24">1 de septiembre de 2021 - 21 de Julio de 2025</div>
+        </>
+      ),
+    },
+    {
+      title: "🏢 Prácticas Profesionales",
+      content: (
+        <>
+          <div className="relative">
+            <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
+              FEB 2025
+            </time>
+            <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">
+            Prácticas profesionales en NTT DATA Spain
+            </div>
+          </div>
+          <div className="text-slate-500 italic sm:ml-24">
+          Prácticas de profesionales de 6 meses tras estudios de Grado en Ingeniería Informática en <a href="https://es.nttdata.com/" className="text-blue-500 underline">NTTData</a>, Ciudad Real, España.<br/> Se destacada el desarrollo web frontend con Angular para una empresa cervecera reconocida, con involucración real y total en el día a día del equipo de desarrollo. Experiencia con AWS, Redux con NgRx, metodología Scrum, SCSS, entre otros.
+          </div>
+          <div className="text-slate-500 italic sm:ml-24">
+            11 de febrero de 2025 - 31 de julio de 2025
+          </div>
         </>
       ),
     },
@@ -190,22 +214,25 @@ function App() {
         <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-4"> {/* Reduced padding */}
           <div className="flex flex-col lg:flex-row items-center justify-center">
             <BlurFade inView={true} delay={0.2}>
-              <div className="text-center lg:text-left lg:w-3/4 p-4 lg:p-8 lg:my-4">
-                <p className="text-2xl lg:text-3xl text-black">
-                  Te doy la bienvenida a mi página web personal. <br/> <br/>
-                  Mi nombre es <br/><span className="text-red-500 font-semibold italic">Felipe Alcázar Gómez</span>.<br/><br/> 
-                  Tengo <span className="text-red-500 font-semibold italic">{age} años </span> y soy de <span className="text-red-500 font-semibold italic">Ciudad Real</span>, España.<br/><br/>
-                  Aquí podrás encontrar toda la información sobre mi <span className="text-red-500 font-semibold italic">formación</span> académica,  
-                  <span className="text-red-500 font-semibold italic"> experiencia</span> profesional y 
-                  <span className="text-red-500 font-semibold italic"> proyectos</span> personales. <br/><br/>¡Espero que te guste!
-                </p>
-              </div>
+            <div className="text-center lg:text-left lg:w-3/4 p-4 lg:p-8 lg:my-4">
+            <p className="text-2xl lg:text-3xl text-black">
+              Mi nombre es <span className="text-red-500 font-semibold italic">Felipe Alcázar Gómez</span>.<br/><br/>
+              Tengo <span className="text-red-500 font-semibold italic">{age} años</span>, vivo en Ciudad Real y soy <span className="text-red-500 font-semibold italic">Ingeniero Informático</span>.<br/><br/>
+              Destaco por mi <span className="text-red-500 font-semibold italic">proactividad</span>, por estar siempre listo para trabajar en <span className="text-red-500 font-semibold italic">equipo</span> como se debe, con un especial gusto personal por el <span className="text-red-500 font-semibold italic">desarrollo web</span>.<br/><br/>
+              Aquí podrás encontrar toda la información sobre mi <span className="text-red-500 font-semibold italic">formación</span> académica, <span className="text-red-500 font-semibold italic">experiencia</span> profesional y <span className="text-red-500 font-semibold italic">proyectos</span> personales.<br/><br/>
+              ¡Espero que te guste!
+            </p>
+          </div>
             </BlurFade>
             <BlurFade inView={true} delay={0.2}>
-              <div className="w-full max-w-xs lg:max-w-none">
-                <img src={`${process.env.PUBLIC_URL}/profilePicbio.jpg`} alt="Felipe Alcázar" className="h-auto rounded-lg shadow-lg w-full lg:w-auto" />
-              </div>
-            </BlurFade>
+            <div className="w-full max-w-xs lg:max-w-none lg:w-96 xl:w-[400px]">
+              <img
+                src={`${process.env.PUBLIC_URL}/profilePicbio.jpg`}
+                alt="Felipe Alcázar"
+                className="h-auto rounded-lg shadow-lg w-full lg:w-96 xl:w-[400px]"
+              />
+            </div>
+          </BlurFade>
           </div>
         </div>
       </section>
