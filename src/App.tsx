@@ -120,7 +120,7 @@ const App: React.FC = () => {
           </Dock>
         </div>
       </ShineBorder>
-      <section className="relative min-h-screen flex flex-col justify-center bg-gray-100 overflow-hidden m-0 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+      <section className="relative min-h-screen flex flex-col justify-center bg-gray-100 overflow-hidden m-0 p-4 sm:p-6 xl:p-12">
         <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-4">
           <div className="flex flex-col lg:flex-row items-center justify-center">
             <BlurFade inView={true} delay={0.2}>

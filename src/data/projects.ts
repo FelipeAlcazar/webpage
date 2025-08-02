@@ -24,7 +24,7 @@ export const projects: Project[] = [
     text: 'NoteTopia es una aplicación web basada en la creación y compartición de notas de forma colaborativa inspirada en Notion.',
     image: `${process.env.PUBLIC_URL}/NoteTopia-Logo.jpg`,
     link: `${process.env.PUBLIC_URL}/NoteTopia.pdf`,
-    technologies: ['VS Code', 'React', 'Node.js', 'Express', 'MongoDB'],
+    technologies: ['VS Code', 'React', 'Node.js', 'JavaScript', 'Express', 'MongoDB'],
     buttonText: 'Ver Documentación',
     buttonColor: 'bg-red-500',
     note: 'Su repositorio es privado al incluir información sensible. Se incluye la documentación del proyecto.'
@@ -59,6 +59,6 @@ export const projects: Project[] = [
     text: 'Este proyecto es la propia página que estás visitando. Está construida con React y Tailwind CSS para una experiencia dinámica, responsive y visualmente atractiva.',
     image: `${process.env.PUBLIC_URL}/webpage-logo.png`,
     link: 'https://github.com/FelipeAlcazar/webpage',
-    technologies: ['VS Code', 'React', 'Node.js', 'Tailwind CSS', 'JavaScript']
+    technologies: ['VS Code', 'React', 'Node.js', 'TypeScript', 'JavaScript', 'Tailwind CSS']
   }
 ];

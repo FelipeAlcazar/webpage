@@ -80,9 +80,9 @@ export const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
   };
 
   return (
-    <div className={cn("w-full max-w-6xl mx-auto px-4 md:px-6 py-8", className)}>
+    <div className={cn("w-full max-w-6xl mx-auto px-4 md:px-6", className)}>
       <div className="text-center mb-4">
-        <div className="inline-flex items-center gap-2 text-sm justify-center w-full">
+        <div className="inline-flex py-4 items-center gap-2 text-sm justify-center w-full">
           <div className="flex bg-gray-100 rounded-xl shadow-inner p-1">
             {[
               { value: 'most-used', label: 'Más usado' },
@@ -115,10 +115,10 @@ export const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
               <button
                 onClick={() => toggleTechnology(tech.name)}
                 className={cn(
-                  "flex flex-col items-center justify-center p-4 rounded-2xl border-2 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg",
+                  "flex flex-col items-center justify-center p-4 rounded-2xl border-2 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl",
                   "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28",
                   {
-                    "bg-red-500 border-red-500 shadow-lg scale-105": isSelected,
+                    "bg-red-500 border-red-500 scale-105": isSelected,
                     "bg-white border-gray-300 hover:border-red-400": !isSelected,
                   }
                 )}
@@ -151,21 +151,42 @@ export const TechnologyFilter: React.FC<TechnologyFilterProps> = ({
           );
         })}
       </div>
-      {isMobile && technologies.length > 6 && (
-        <div className="text-center">
-          <button
-            onClick={toggleShowAll}
-            className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-2 rounded-lg transition-colors duration-300"
-          >
-            {showAll ? 'Ver menos' : `Ver más (${technologies.length - 6} más)`}
-          </button>
+      {/* On mobile, show the buttons in a row, separated, and with improved style */}
+      {isMobile && (technologies.length > 6 || selectedTechnologies.length > 0) && (
+        <div className="flex justify-center gap-4 mb-2">
+          {technologies.length > 6 && (
+            <button
+              onClick={toggleShowAll}
+              className={cn(
+                "flex items-center gap-2 px-5 py-2 rounded-xl font-semibold shadow transition-all duration-300 border-2",
+                "bg-white border-red-400 text-red-500 hover:bg-red-50 hover:border-red-500 hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-red-300"
+              )}
+            >
+              {showAll ? 'Ver menos' : `Ver más (${technologies.length - 6} más)`}
+            </button>
+          )}
+          {selectedTechnologies.length > 0 && (
+            <button
+              onClick={clearAllFilters}
+              className={cn(
+                "flex items-center gap-2 px-5 py-2 rounded-xl font-semibold shadow transition-all duration-300 border-2",
+                "bg-gray-100 border-gray-400 text-gray-700 hover:bg-gray-200 hover:border-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300"
+              )}
+            >
+              Limpiar Filtros
+            </button>
+          )}
         </div>
       )}
-      {selectedTechnologies.length > 0 && (
-        <div className="text-center">
+      {/* On desktop, show Limpiar Filtros below if needed */}
+      {!isMobile && selectedTechnologies.length > 0 && (
+        <div className="flex justify-center">
           <button
             onClick={clearAllFilters}
-            className="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors duration-300"
+            className={cn(
+              "inline-flex items-center gap-2 px-5 py-2 rounded-xl font-semibold shadow transition-all duration-300 border-2",
+              "bg-gray-100 border-gray-400 text-gray-700 hover:bg-gray-200 hover:border-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300"
+            )}
           >
             Limpiar Filtros
           </button>
