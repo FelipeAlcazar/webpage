@@ -3,7 +3,7 @@
 import React, { PropsWithChildren, useRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Tooltip as ReactTooltip } from 'react-tooltip'; // Correct import statement
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 
 import { cn } from "../../lib/utils"; 
 
@@ -77,7 +77,8 @@ export interface DockIconProps {
   mouseX?: any;
   className?: string;
   children?: React.ReactNode;
-  title?: string; // Add title prop for tooltip
+  title?: string;
+  onClick?: () => void;
   props?: PropsWithChildren;
 }
 
@@ -88,7 +89,7 @@ const DockIcon = ({
   mouseX,
   className,
   children,
-  title, // Destructure title prop
+  title,
   ...props
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -120,8 +121,8 @@ const DockIcon = ({
           "flex aspect-square cursor-pointer items-center justify-center rounded-full",
           className,
         )}
-        data-tooltip-id={title} // Add data-tooltip-id attribute for tooltip
-        data-tooltip-content={title} // Add data-tooltip-content attribute for tooltip
+        data-tooltip-id={title}
+        data-tooltip-content={title}
         {...props}
       >
         {children}
@@ -129,9 +130,9 @@ const DockIcon = ({
       <ReactTooltip 
         id={title} 
         place="top" 
-        className="rounded-full" // Use rounded-full for fully rounded corners
-        noArrow // Add noArrow prop to remove the arrow
-        style={{ borderRadius: '16px' }} // Add custom border-radius for more rounded corners
+        className="rounded-full"
+        noArrow
+        style={{ borderRadius: '16px' }}
       />
     </>
   );

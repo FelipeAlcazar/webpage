@@ -44,7 +44,7 @@ export default function WordPullUp({
         <motion.span
           key={i}
           variants={framerProps}
-          transition={{ delay: 1.3 + i * delayMultiple }} // Add initial delay of 1 second
+          transition={{ delay: 1.3 + i * delayMultiple }}
           style={{ display: "inline-block", paddingRight: "8px" }}
         >
           {word === "" ? <span>&nbsp;</span> : word}
