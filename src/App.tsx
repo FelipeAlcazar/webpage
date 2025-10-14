@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './index.css';
 import GradualSpacing from "./components/magicui/gradual-spacing";
 import WordPullUp from "./components/ui/word-pull-up";
 import ShineBorder from "./components/ui/shine-border";
@@ -128,7 +127,7 @@ const App: React.FC = () => {
             <p className="text-2xl lg:text-3xl text-black">
               Mi nombre es <span className="text-red-500 font-semibold italic">Felipe Alcázar Gómez</span>.<br/><br/>
               Tengo <span className="text-red-500 font-semibold italic">{age} años</span>, vivo en Ciudad Real y soy <span className="text-red-500 font-semibold italic">Ingeniero Informático</span>.<br/><br/>
-              Destaco por mi <span className="text-red-500 font-semibold italic">proactividad</span>, por estar siempre listo para trabajar en <span className="text-red-500 font-semibold italic">equipo</span> como se debe, con un especial gusto personal por el <span className="text-red-500 font-semibold italic">desarrollo web</span>.<br/><br/>
+              Destaco por mi <span className="text-red-500 font-semibold italic">proactividad</span>, por estar siempre listo para trabajar en <span className="text-red-500 font-semibold italic">equipo</span> como se debe, con incansables ganas de <span className="text-red-500 font-semibold italic">aprender</span>.<br/><br/>
               Aquí podrás encontrar toda la información sobre mi <span className="text-red-500 font-semibold italic">formación</span> académica, <span className="text-red-500 font-semibold italic">experiencia</span> profesional y <span className="text-red-500 font-semibold italic">proyectos</span> personales.<br/><br/>
               ¡Espero que te guste!
             </p>
