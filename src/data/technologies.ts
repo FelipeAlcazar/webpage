@@ -1,5 +1,7 @@
 import { Technology } from '../types';
 
+//Obtained from https://svgl.app/directory/library
+
 export const technologies: Technology[] = [
   { name: 'React', logo: `${process.env.PUBLIC_URL}/react.svg`, displayName: 'React' },
   { name: 'TypeScript', logo: `${process.env.PUBLIC_URL}/typescript.svg`, displayName: 'TypeScript' },
@@ -15,4 +17,8 @@ export const technologies: Technology[] = [
   { name: 'Docker', logo: `${process.env.PUBLIC_URL}/docker.svg`, displayName: 'Docker' },
   { name: 'Tailwind CSS', logo: `${process.env.PUBLIC_URL}/tailwindcss.svg`, displayName: 'Tailwind CSS' },
   { name: 'Windows', logo: `${process.env.PUBLIC_URL}/windows.svg`, displayName: 'Windows' },
+  { name: 'Angular', logo: `${process.env.PUBLIC_URL}/angular.svg`, displayName: 'Angular' },
+  { name: 'Spring Boot', logo: `${process.env.PUBLIC_URL}/springboot.svg`, displayName: 'Spring Boot' },
+  { name: 'MySQL', logo: `${process.env.PUBLIC_URL}/mysql.svg`, displayName: 'MySQL' },
+  { name: 'Java', logo: `${process.env.PUBLIC_URL}/java.svg`, displayName: 'Java' },
 ];

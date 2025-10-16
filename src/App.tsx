@@ -189,7 +189,7 @@ const App: React.FC = () => {
           <div className="flex flex-col justify-center divide-y divide-slate-200 h-full">
             <div className="w-full h-full">
               <div className="h-full">
-                <Timeline data={timelineData} />
+                <Timeline data={[...timelineData].reverse()} />
               </div>
             </div>
           </div>

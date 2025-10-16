@@ -46,6 +46,14 @@ export const projects: Project[] = [
     technologies: ['Visual Studio', 'C#', 'Windows']
   },
   {
+    id: 'tecweb-lists',
+    title: 'SplitList',
+    text: 'SplitList es una aplicación web para la gestión de listas de la compra. Permite crear listas, agregar productos, colaborar con otros usuarios mediante websockets y realizar pagos usando la API de Stripe.',
+    image: `${process.env.PUBLIC_URL}/tecweb-lists.png`,
+    link: 'https://github.com/FelipeAlcazar/TecWeb-Lists',
+    technologies: ['VS Code', 'Angular', 'Spring Boot', 'Java', 'MySQL'],
+  },
+  {
     id: 'mulsurv',
     title: 'MulSurv',
     text: 'MulSurv es un juego inspirado en Vampire Survivors con modos de juego para un jugador y multijugador. Presenta un estilo pixel-like con personajes inspirados en elementos multimedia.',
@@ -61,4 +69,5 @@ export const projects: Project[] = [
     link: 'https://github.com/FelipeAlcazar/webpage',
     technologies: ['VS Code', 'React', 'Node.js', 'TypeScript', 'JavaScript', 'Tailwind CSS']
   }
+
 ];
