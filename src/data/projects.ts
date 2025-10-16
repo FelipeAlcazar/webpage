@@ -51,7 +51,7 @@ export const projects: Project[] = [
     text: 'SplitList es una aplicación web para la gestión de listas de la compra. Permite crear listas, agregar productos, colaborar con otros usuarios mediante websockets y realizar pagos usando la API de Stripe.',
     image: `${process.env.PUBLIC_URL}/tecweb-lists.png`,
     link: 'https://github.com/FelipeAlcazar/TecWeb-Lists',
-    technologies: ['VS Code', 'Angular', 'Spring Boot', 'Java', 'MySQL'],
+    technologies: ['VS Code', 'Angular', 'TypeScript', 'Spring Boot', 'Java', 'MySQL'],
   },
   {
     id: 'mulsurv',
