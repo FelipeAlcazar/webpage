@@ -89,7 +89,7 @@ export const timelineData: TimelineItem[] = [
       <>
         <div className="relative">
           <time className="block sm:absolute sm:left-0 sm:translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
-            FEB 2025
+            JUL 2025
           </time>
           <div className="text-xl font-bold text-slate-900 mt-8 sm:mt-0 sm:ml-24">
           Prácticas profesionales en NTT DATA Spain
